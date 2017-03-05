@@ -1,0 +1,153 @@
+<!--<div class="panel panel-default">
+  <div class="panel-heading">Panel Heading</div>
+  <div class="panel-body">
+-->
+<div id="sidebarContainer" >
+
+  <accordion>
+    <accordion-group #group01>
+      <div accordion-heading>
+        Trains
+        <i class="pull-right float-xs-right glyphicon"
+           [ngClass]="{'glyphicon-chevron-down': group01?.isOpen, 'glyphicon-chevron-right': !group01?.isOpen}"></i>
+      </div>
+      This is just some content to illustrate fancy headings.
+    </accordion-group>
+    <accordion-group #group02>
+      <div accordion-heading>
+        SBB2399
+        <i class="pull-right float-xs-right glyphicon"
+           [ngClass]="{'glyphicon-chevron-down': group02?.isOpen, 'glyphicon-chevron-right': !group02?.isOpen}"></i>
+      </div>
+      This is just some content to illustrate fancy headings.
+    </accordion-group>
+    <accordion-group #group03>
+      <div accordion-heading>
+        SBB2376
+        <i class="pull-right float-xs-right glyphicon"
+           [ngClass]="{'glyphicon-chevron-down': group03?.isOpen, 'glyphicon-chevron-right': !group03?.isOpen}"></i>
+      </div>
+      This is just some content to illustrate fancy headings.
+    </accordion-group>
+    <accordion-group #group04>
+      <div accordion-heading>
+        SBB4192
+        <i class="pull-right float-xs-right glyphicon"
+           [ngClass]="{'glyphicon-chevron-down': group04?.isOpen, 'glyphicon-chevron-right': !group04?.isOpen}"></i>
+      </div>
+      This is just some content to illustrate fancy headings.
+    </accordion-group>
+    <accordion-group #group05 >
+      <div accordion-heading >
+        SBB468192
+        <i class="pull-right float-xs-right glyphicon"
+           [ngClass]="{'glyphicon-chevron-down': group05?.isOpen, 'glyphicon-chevron-right': !group05?.isOpen}"></i>
+      </div>
+      This is just some content to illustrate fancy headings.
+    </accordion-group>
+    <accordion-group #group06 >
+      <div accordion-heading >
+        SBB97834779
+        <i class="pull-right float-xs-right glyphicon"
+           [ngClass]="{'glyphicon-chevron-down': group06?.isOpen, 'glyphicon-chevron-right': !group06?.isOpen}"></i>
+      </div>
+      This is just some content to illustrate fancy headings.
+    </accordion-group>
+    <accordion-group #group01 >
+      <div accordion-heading >
+        SBB4617
+        <i class="pull-right float-xs-right glyphicon"
+           [ngClass]="{'glyphicon-chevron-down': group06?.isOpen, 'glyphicon-chevron-right': !group06?.isOpen}"></i>
+      </div>
+      This is just some content to illustrate fancy headings.
+    </accordion-group>
+    <accordion-group #group07 >
+      <div accordion-heading >
+        SBB644187
+        <i class="pull-right float-xs-right glyphicon"
+           [ngClass]="{'glyphicon-chevron-down': group07?.isOpen, 'glyphicon-chevron-right': !group07?.isOpen}"></i>
+      </div>
+      This is just some content to illustrate fancy headings.
+    </accordion-group>
+    <accordion-group #group08 >
+      <div accordion-heading >
+        SBB6410
+        <i class="pull-right float-xs-right glyphicon"
+           [ngClass]="{'glyphicon-chevron-down': group08?.isOpen, 'glyphicon-chevron-right': !group08?.isOpen}"></i>
+      </div>
+      This is just some content to illustrate fancy headings.
+    </accordion-group>
+    <accordion-group #group09 >
+      <div accordion-heading >
+        SBB7401
+        <i class="pull-right float-xs-right glyphicon"
+           [ngClass]="{'glyphicon-chevron-down': group09?.isOpen, 'glyphicon-chevron-right': !group09?.isOpen}"></i>
+      </div>
+      This is just some content to illustrate fancy headings.
+    </accordion-group>
+    <accordion-group #group10 >
+      <div accordion-heading >
+        SBB3918
+        <i class="pull-right float-xs-right glyphicon"
+           [ngClass]="{'glyphicon-chevron-down': group10?.isOpen, 'glyphicon-chevron-right': !group10?.isOpen}"></i>
+      </div>
+      This is just some content to illustrate fancy headings.
+    </accordion-group>
+    </accordion>
+<!--
+    <button type="button" class="btn btn-default"
+            (click)="isCollapsed01 = !isCollapsed01">Trains    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+    </button>
+    <div (collapsed)="setHeight(el01, 0)"
+         (expanded)="setHeight(el01, 0);setHeight(el01, el01.scrollHeight)"
+         [collapse]="isCollapsed01"
+         class="card card-block card-header block" #el01>
+      <div class="well well-lg">
+
+        <div class="checkbox">
+          <label><input type="checkbox" value="">Operating</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="">All</label>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-default"
+            (click)="isCollapsed02 = !isCollapsed02">SBB2312    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </button>
+    <div (collapsed)="setHeight(el02, 0)"
+         (expanded)="setHeight(el02, 0);setHeight(el02, el02.scrollHeight)"
+         [collapse]="isCollapsed02"
+         class="card card-block card-header block" #el02>
+      <div class="well well-lg">Some content</div>
+    </div>
+
+
+    <button type="button" class="btn btn-default"
+            (click)="isCollapsed03 = !isCollapsed03">SBB2302    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </button>
+    <div (collapsed)="setHeight(el03, 0)"
+         (expanded)="setHeight(el03, 0);setHeight(el03, el03.scrollHeight)"
+         [collapse]="isCollapsed03"
+         class="card card-block card-header block" #el03>
+      <div class="well well-lg">Some content</div>
+    </div>
+
+
+    <button type="button" class="btn btn-default"
+            (click)="isCollapsed04 = !isCollapsed04">SBB2305    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </button>
+    <div (collapsed)="setHeight(el04, 0)"
+         (expanded)="setHeight(el04, 0);setHeight(el04, el04.scrollHeight)"
+         [collapse]="isCollapsed04"
+         class="card card-block card-header block" #el04>
+      <div class="well well-lg">Some content</div>
+    </div>
+</div>
+-->
+<!--
+  </div>
+</div>
+-->

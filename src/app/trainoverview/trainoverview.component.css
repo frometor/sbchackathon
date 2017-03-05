@@ -1,0 +1,61 @@
+.btnContainer {
+  display: flex; /* or inline-flex */
+}
+
+.dateBtn {
+  flex-grow: 4; /* default 0 */
+  min-height: 10vh;
+  font-size: larger;
+}
+
+.btnArrow {
+  flex-grow: 1; /* default 0 */
+  min-height: 10vh;
+}
+
+.searchContainer {
+  display: flex; /* or inline-flex */
+  width: 100%
+}
+.arrived{
+  color: green;
+}
+.estimated{
+  color:purple;
+}
+.searchField {
+  /* default 0 */
+  min-height: 10vh;
+  font-size: larger;
+}
+* {
+ padding: 0;
+}
+.row{
+  padding-left:20px;
+}
+#searchBtn{
+  font-size: larger;
+  width: 100%;
+  min-height: 10vh;
+  background-color: #e60e00;
+  color: #FFFFFF;
+}
+
+/*
+.searchContainer {
+
+}
+
+.searchbar {
+
+  height: 10vh;
+  margin: 0;
+}
+
+.btnsearchbar {
+  background-color: #e60e00;
+  color: #FFFFFF;
+
+}
+*/

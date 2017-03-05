@@ -1,0 +1,133 @@
+<!--<div class="col-md-12">
+  <div class="col-md-8">
+    <i>
+    <input type="text" class="searchField form-control " placeholder="Search for...">
+  </i>
+  </div>
+  <div class="searchButton col-md-4 ">
+    <button id="searchBtn" class="button" type="button">SEARCH!</button>
+  </div>
+
+</div>-->
+<div class="row">
+  <div class="col-md-8">
+    <h1> <i class="fa fa-train" aria-hidden="true"></i> SBB2399 Delivery Overview</h1>
+    <h3>Select a date</h3>
+
+  </div>
+  <div class="col-md-4">
+    <h1>Zürich <i class="fa fa-arrows-h" aria-hidden="true"></i> Heerbrugg</h1>
+    <h4>05/03/2017-14:52<i class="fa fa-arrows-h" aria-hidden="true"></i>05/03/2017-18:20</h4>
+
+  </div>
+</div>
+
+<div class="btnContainer col-md-12">
+  <button type="button" class="btnArrow dateBtn btn-default"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </button>
+  <button type="button" class="btn dateBtn btn-default">Mar 14th 2017<br>Tue</button>
+  <button type="button" class="btn dateBtn btn-default">Mar 15th 2017<br>Wed</button>
+  <button type="button" class="btn dateBtn btn-default">Mar 16th 2017<br>Thu</button>
+  <button type="button" class="btn dateBtn btn-default">Mar 17th 2017<br>Fri</button>
+  <button type="button" class="btnArrow dateBtn btn-default"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+  </button>
+</div>
+
+<div class="col-md-12">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Customer ID</th>
+      <th>Status</th>
+      <th>Departure</th>
+      <th>Delivery est.</th>
+      <th>Transport ID</th>
+      <th>Cargo Type</th>
+      <th>Special Requirements</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let customerObj of _dataAll">
+      <td>
+        {{ customerObj.client.name}}
+      </td>
+      <td>
+        {{ customerObj.client.customerId}}
+      </td>
+      <td>
+        {{ customerObj.client.customerId }}
+      </td>
+      <td >
+        {{ customerObj.departureTime*1000 | date: 'dd.MM.yyyy HH:mm'}}
+      </td>
+      <td class="arrived" *ngIf="customerObj.deliverTime != null ">
+        {{ customerObj.deliverTime*1000 | date: 'dd.MM.yyyy HH:mm'}}
+      </td>
+      <td class="estimated" *ngIf="customerObj.deliverTime == null">
+        {{giveTimeEstimate() | date:'dd.MM.yyyy HH:mm:ss'}}
+      </td>
+      <td>
+        {{ customerObj.deliverTime}}
+      </td>
+      <td>
+        {{ customerObj.client.cargoType}}
+      </td>
+      <td>
+        {{ customerObj.client.specialRequirements}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--
+<div class="col-md-12">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Customer ID</th>
+      <th>Transport ID</th>
+      <th>Cargo Type</th>
+      <th>Special Requirements</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of _data" *ngModel="data[column]">
+    </tbody>
+  </table>
+</div>
+-->
+<!--
+<div class="col-md-12">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Customer ID</th>
+      <th>Transport ID</th>
+      <th>Cargo Type</th>
+      <th>Special Requirements</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>The Coca Cola Company</td>
+      <td>123EFG</td>
+      <td>john@example.com</td>
+    </tr>
+    <tr>
+      <td>Mary</td>
+      <td>Moe</td>
+      <td>mary@example.com</td>
+    </tr>
+    <tr>
+      <td>July</td>
+      <td>Dooley</td>
+      <td>july@example.com</td>
+    </tr>
+    </tbody>
+  </table>
+</div>-->
